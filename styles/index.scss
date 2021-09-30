@@ -1,0 +1,14 @@
+@import "./static/variables";
+@import "./static/general";
+@import "./static/resets";
+
+@import "./assets/components/header";
+@import "./assets/components/footer";
+@import "./assets/components/card-post";
+@import "./assets/components/card-user";
+@import "./assets/utilities/btns";
+
+@import "./pages/contact";
+@import "./pages/home";
+@import "./pages/posts";
+@import "./pages/users";

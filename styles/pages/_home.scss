@@ -1,5 +1,13 @@
+.section-1 {
+  margin: 10px;
+  padding: 0px 50px 0px 50px;
+  h2 {
+    margin: 5px;
+  }
+}
+
 .section-2 {
-  padding: 10px;
+  padding: 0px 50px 0px 50px;
   column-count: 2;
   text-align: justify;
   column-gap: 3em;
@@ -7,10 +15,6 @@
   h3 {
     display: flex;
     justify-content: center;
-  }
-
-  .tittle3 {
-    padding-top: 20px;
   }
 }
 

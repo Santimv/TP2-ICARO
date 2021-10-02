@@ -1,14 +1,12 @@
 // Variables de HTML
 const users = document.querySelector("#users");
 
+let aux = '<a href="/pages/usuario.html"></a>';
 let userInfo =
-  '<h1 id="username"></h1><div class="card-info"><label></label><label></label><label></label><label></label></div><a href="/pages/usuario.html"><button class= "btnViewUser">Visitar perfil</button></a><footer><div class="posts"><p><strong>Posteos:</strong></p><p>10</p></div></footer>';
+  '<h1 id="username"></h1><div class="card-info"><label></label><label></label><label></label><label></label></div><a target="_blank" href="/pages/usuario.html"><button class= "btnViewUser">Visitar perfil</button></a></div><footer><div class="posts"><p><strong>Posteos:</strong></p><p>10</p></div></footer>';
 let arrUser = [];
 let loading = true;
-let btn = [];
 let userList = document.getElementById("users");
-let idUser;
-let userSelected;
 
 // Crear elementos de user
 const createCardUserElement = (id, user) => {
@@ -37,9 +35,11 @@ fetch("https://jsonplaceholder.typicode.com/users")
     arrUser.push(data);
     loading = false;
 
-    data.forEach((x, i) => {
-      users.appendChild(createCardUserElement(i + 1, x));
-    });
+    if (users != undefined) {
+      data.forEach((x, i) => {
+        users.appendChild(createCardUserElement(i + 1, x));
+      });
+    }
   })
   .catch((err) => console.log("ERROR: ", err));
 
@@ -47,20 +47,25 @@ fetch("https://jsonplaceholder.typicode.com/users")
 //   .then((response) => response.json())
 //   .then((json) => console.log(json));
 
-function selectUser(e) {
+async function selectUser(e) {
   if (e.target.classList.contains("btnViewUser")) {
     let li = e.target.parentElement;
-    idUser = li.getAttribute("id");
+    let idUser = li.getAttribute("id");
+    let userSelected = await getUserData(idUser);
+    console.log(userSelected);
+    userSelected
+      ? localStorage.setItem("userSelected", JSON.stringify(userSelected))
+      : localStorage.clear();
   }
+}
+userList?.addEventListener("click", selectUser);
+
+function getUserData(id) {
   try {
-    fetch("https://jsonplaceholder.typicode.com/users/" + idUser)
+    return fetch("https://jsonplaceholder.typicode.com/users/" + id)
       .then((response) => response.json())
-      .then((json) => {
-        userSelected = json;
-      });
+      .then((json) => json);
   } catch (error) {
     console.error(error);
   }
 }
-
-userList.addEventListener("click", selectUser);

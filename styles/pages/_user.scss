@@ -1,0 +1,68 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body .dl-blurbs {
+  font-size: 1rem;
+  color: $body-text-color;
+  line-height: 1.5;
+  display: grid;
+  margin-top: 20px;
+  border-top: 2px solid $terceary-color;
+  @include tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+
+.tittle1 {
+  margin-top: 1.5rem;
+  font-size: 1.7rem;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  .data {
+    display: grid;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+dl {
+  counter-reset: count;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin: 0;
+  @include tablet-up {
+    padding-left: 2vw;
+  }
+  @include desktop {
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+  }
+}
+dl + dl {
+  counter-reset: counter 4;
+}
+dt {
+  counter-increment: count;
+  color: $primary-color;
+  font-size: 2.4rem;
+  text-transform: none;
+}
+dt::before {
+  content: counter(count, decimal-leading-zero) ".";
+  color: $maximum-blue;
+  margin-left: -1vw;
+  padding-right: 12px;
+}
+
+dd {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}

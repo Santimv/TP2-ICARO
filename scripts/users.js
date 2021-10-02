@@ -1,9 +1,7 @@
 const userProfile = document.querySelector("#profileUser");
-const userData2 =
-  '<h2 class="tittle1">Santiago</h2><div class="profile-info"><div class="data"><label>email: "Shanna@melissa.tv"</label><label>name: "Ervin Howell"</label><label>phone: "010-692-6593 x09125"</label><label>username: "Antonette"</label><label>website: "anastasia.net"</label></div><div class="data"><label>city: "Wisokyburgh"</label><label>street: "Victor Plains"</label><label>suite: "Suite 879"</label><label>zipcode: "90566-7771"</label></div><div class="data"><label>Compañia: "Deckow-Crist"</label></div></div>';
 
 const userData =
-  '<h2 class="tittle1">Santiago</h2><div class="profile-info"><div class="data"><label></label><label></label><label></label><label></label></div><div class="data"><label></label><label></label><label></label><label></label></div><div class="data"><label></label></div></div>';
+  '<h2 class="tittle1">Santiago</h2><div class="profile-info"><div class="data"><h3 class="tittle2">Datos Personales</h3><label></label><label></label><label></label><label></label></div><div class="data"><h3 class="tittle2">Ubicación</h3><label></label><label></label><label></label><label></label></div><div class="data"><h3 class="tittle2">Compañía</h3><label></label><label></label></div></div>';
 
 if (localStorage.getItem("userSelected")) {
   let userProfile = JSON.parse(localStorage.getItem("userSelected"));
@@ -16,14 +14,26 @@ function createProfileUserElement(user) {
   userProfile.innerHTML = userData;
 
   userProfile.children[0].innerText = user.username;
-  userProfile.children[1].children[0].children[0].innerText =
-    "Nombre: " + user.name;
   userProfile.children[1].children[0].children[1].innerText =
-    "Telefono: " + user.phone;
+    "Nombre: " + user.name;
   userProfile.children[1].children[0].children[2].innerText =
-    "Email: " + user.email;
+    "Teléfono: " + user.phone;
   userProfile.children[1].children[0].children[3].innerText =
+    "Email: " + user.email;
+  userProfile.children[1].children[0].children[4].innerText =
     "Website: " + user.website;
+  userProfile.children[1].children[1].children[1].innerText =
+    "Ciudad: " + user.address.city;
+  userProfile.children[1].children[1].children[2].innerText =
+    "Calle: " + user.address.street;
+  userProfile.children[1].children[1].children[3].innerText =
+    "Suite: " + user.address.suite;
+  userProfile.children[1].children[1].children[4].innerText =
+    "Cód. Postal: " + user.address.zipcode;
+  userProfile.children[1].children[2].children[1].innerText =
+    "Nombre Social: " + user.company.name;
+  userProfile.children[1].children[2].children[2].innerText =
+    "Eslogan: " + user.company.catchPhrase;
 
   return userProfile;
 }

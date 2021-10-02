@@ -232,6 +232,10 @@ body {
   margin: 5px;
 }
 
+.section-1 a {
+  color: #82a8ec;
+}
+
 .section-2 {
   padding: 0px 50px 0px 50px;
   -webkit-column-count: 2;

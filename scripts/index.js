@@ -1,9 +1,8 @@
 // Variables de HTML
 const users = document.querySelector("#users");
 
-let aux = '<a href="/pages/usuario.html"></a>';
 let userInfo =
-  '<h1 id="username"></h1><div class="card-info"><label></label><label></label><label></label><label></label></div><a target="_blank" href="/pages/usuario.html"><button class= "btnViewUser">Visitar perfil</button></a></div><footer><div class="posts"><p><strong>Posteos:</strong></p><p>10</p></div></footer>';
+  '<h1 id="username"></h1><div class="card-info"><label></label><label></label><label></label><label></label></div><div><button class= "btnViewUser">Visitar perfil</button></div></div><footer><div class="posts"><p><strong>Posteos:</strong></p><p>10</p></div></footer>';
 let arrUser = [];
 let loading = true;
 let userList = document.getElementById("users");
@@ -56,8 +55,10 @@ async function selectUser(e) {
     userSelected
       ? localStorage.setItem("userSelected", JSON.stringify(userSelected))
       : localStorage.clear();
+    window.location.href = "/pages/usuario.html";
   }
 }
+
 userList?.addEventListener("click", selectUser);
 
 function getUserData(id) {

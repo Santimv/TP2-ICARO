@@ -1,33 +1,15 @@
+$monospace: monospace;
+
 $white: #d0d0d0;
 $black: #1d1b1b;
 $primary-color: #12265a;
 $secundary-color: #82a8ec;
 $terceary-color: rgb(50, 95, 116);
+$cadet: #4f6d7aff;
+$maximum-blue: rgba(94, 165, 184, 0.705);
 $yellow: #ffc145;
-
-$monospace: monospace;
-//- Typography
 
 $font-size-small: 0.875em;
 
-/*- Screen Sizes*/
 $tablet-width: 768px;
 $desktop-width: 1024px;
-
-/* COLOR HEX */
-$cadet: #4f6d7aff;
-$maximum-blue: #5ea5b8ff;
-$columbia-blue: #c0d6dfff;
-$platinum: #eaeaeaff;
-$cultured: #f3f3f3ff;
-$nero: #444444;
-
-/* COLOR Gradient */
-$dl-gradient-right: linear-gradient(
-  90deg,
-  rgba(0, 0, 0, 0.04) 20%,
-  rgba(255, 255, 255, 0) 0%
-);
-
-$body-background-color: $platinum;
-$body-text-color: $nero;

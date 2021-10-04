@@ -4,22 +4,13 @@
   box-sizing: inherit;
 }
 
-body .dl-blurbs {
-  font-size: 1rem;
-  color: $body-text-color;
-  line-height: 1.5;
-  display: grid;
-  margin-top: 20px;
-  border-top: 2px solid $terceary-color;
-  @include tablet-up {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2vw;
-  }
-}
-
 .tittle1 {
   margin-top: 1.5rem;
   font-size: 1.7rem;
+}
+
+.tittle2 {
+  margin-bottom: 4px;
 }
 
 .profile-info {
@@ -33,11 +24,41 @@ body .dl-blurbs {
   }
 }
 
-dl {
-  counter-reset: count;
+body .posts {
+  font-size: 1rem;
+  color: $black;
+  line-height: 1.5;
+  display: grid;
+  margin-top: 20px;
+  margin: 10px;
+  @include tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+
+.tittle-post {
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 1.5rem;
+  border-top: 2px solid $terceary-color;
+}
+
+.post {
   padding-left: 4vw;
   padding-right: 4vw;
   margin: 0;
+  min-height: 20px;
+  margin: 0.2rem;
+  opacity: 0.8;
+  background-color: $maximum-blue;
+  border: 1px solid $primary-color;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  &:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  }
   @include tablet-up {
     padding-left: 2vw;
   }
@@ -45,24 +66,16 @@ dl {
     padding-top: 2vw;
     padding-bottom: 3vw;
   }
-}
-dl + dl {
-  counter-reset: counter 4;
-}
-dt {
-  counter-increment: count;
-  color: $primary-color;
-  font-size: 2.4rem;
-  text-transform: none;
-}
-dt::before {
-  content: counter(count, decimal-leading-zero) ".";
-  color: $maximum-blue;
-  margin-left: -1vw;
-  padding-right: 12px;
-}
 
-dd {
-  margin-left: 5px;
-  margin-bottom: 5px;
+  h4 {
+    color: $primary-color;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  span {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
 }

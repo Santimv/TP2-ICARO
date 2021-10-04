@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
     <script type="module" src="./scripts/index.js" defer></script>
-    <title>System</title>
+    <title>PostFree</title>
   </head>
   <body>
     <div class="header">
-      <h1>My System</h1>
+      <h1>PostFree</h1>
       <nav class="nav-bar">
         <a href="/" class="btn-nav">Home</a>
         <a href="/pages/usuarios.html" class="btn-nav">Usuarios</a>
@@ -20,38 +20,40 @@
     </div>
     <div>
       <div class="section-1">
-        <h2 class="tittle1">Sobre nuestro sistema!</h2>
+        <h2 class="tittle1">Abre tu mente y postea!</h2>
         <span
-          ><strong>Como funciona?</strong> Nuestros usuarios se registran
-          ingresando sus datos, los cuales por politicas de privacidad no son
-          enviados a ningun tercero, son de uso unico para la plataforma. Luego
-          cada usuario realiza posteos de los temas que ellos vean interesantes,
-          la idea es sentirse libre y que se expresen en un post, cada posteo se
-          puede ver en su perfil o en junto con los de otras usuarios. Si tienes
-          dudas acerca del proceso o eres un usuario y tu posteo no se ha
-          publicado correctamente, puedes ir ponerte en contacto con nosotros en
-          el apartado <a href="/pages/contacto.html">Contacto</a>.
+          ><strong>Como funciona nuestro sistema?</strong> Nuestros usuarios se
+          registran ingresando sus datos, los cuales por politicas de privacidad
+          no son enviados a ningun tercero, son de uso unico para la plataforma.
+          Luego cada usuario realiza posteos de los temas que ellos vean
+          interesantes, la idea es sentirse libre y que se expresen en un post,
+          cada posteo se puede ver en su perfil o en junto con los de otras
+          usuarios. Si tienes dudas acerca del proceso o eres un usuario y tu
+          posteo no se ha publicado correctamente, puedes ir ponerte en contacto
+          con nosotros en el apartado
+          <a href="/pages/contacto.html">Contacto</a>.
         </span>
       </div>
       <div class="section-2">
-        <h3 class="tittle2">Posteos</h3>
-        <span
-          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta eius
-          enim ipsa voluptatem a, ratione natus, consectetur beatae similique
-          deleniti repellat praesentium. Atque sequi numquam odit laborum
-          explicabo possimus quam, error dolore voluptatem vitae aut ullam
-          perferendis nemo iure illo voluptates dolores rem aspernatur omnis
-          maiores delectus? Velit, sunt a!</span
-        >
-        <h3 class="tittle3">Usuarios</h3>
-        <span
-          >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta eius
-          enim ipsa voluptatem a, ratione natus, consectetur beatae similique
-          deleniti repellat praesentium. Atque sequi numquam odit laborum
-          explicabo possimus quam, error dolore voluptatem vitae aut ullam
-          perferendis nemo iure illo voluptates dolores rem aspernatur omnis
-          maiores delectus? Velit, sunt a!</span
-        >
+        <div>
+          <h3 class="tittle2">Posteos</h3>
+          <span
+            >Los posteos que encontran en la plataforma son de personas que se
+            expresan, breves pero libres de pensamiento. Tu puedes ser uno, solo
+            ponte en contacto con nosotros y podras estar posteando en cuestion
+            de minutos. Tu pones las palabras y el contenido, nosotros solo la
+            plataforma...
+          </span>
+        </div>
+        <div>
+          <h3 class="tittle3">Usuarios</h3>
+          <span
+            >Nuestros usuarios son de todo el mundo, asi que pueden expresarse
+            como mas deseen. El objetivo es que abran su mente y posteen lo que
+            les salga, con la condicion de respetar a los demas usuarios,
+            lectores y obviamente a la plataforma...
+          </span>
+        </div>
       </div>
     </div>
     <div class="section-3">
@@ -60,19 +62,45 @@
         <form>
           <div class="form">
             <div class="form-group">
-              <input class="form-control" placeholder="Nombre" />
+              <input
+                id="input-name"
+                value=""
+                class="form-control"
+                placeholder="Nombre"
+                autocomplete="off"
+                required
+              />
             </div>
             <div class="form-group">
-              <input class="form-control" placeholder="Email" />
+              <input
+                id="input-email"
+                value=""
+                class="form-control"
+                placeholder="Email"
+                autocomplete="off"
+              />
             </div>
             <div class="form-group">
-              <input class="form-control" placeholder="Telefóno" />
+              <input
+                id="input-phone"
+                value=""
+                class="form-control"
+                placeholder="Telefóno"
+                autocomplete="off"
+              />
             </div>
             <div class="form-group">
-              <input class="form-control" placeholder="Mensaje" />
+              <input
+                id="input-msg"
+                value=""
+                class="form-control"
+                placeholder="Mensaje"
+                autocomplete="off"
+                required
+              />
             </div>
             <div class="form-group buttons">
-              <button class="btn-send">Enviar</button>
+              <button id="btn-send" class="btn-send">Enviar</button>
             </div>
           </div>
         </form>

@@ -176,6 +176,51 @@ body {
   color: #e96fff;
 }
 
+.post {
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin: 0;
+  min-height: 20px;
+  margin: 0.2rem;
+  opacity: 0.8;
+  background-color: rgba(94, 165, 184, 0.705);
+  border: 1px solid #12265a;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.post:hover {
+  opacity: 1;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .post {
+    padding-left: 2vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .post {
+    padding-top: 2vw;
+    padding-bottom: 3vw;
+  }
+}
+
+.post h4 {
+  color: #12265a;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.post span {
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
 .btn-send {
   background: #82a8ec;
   color: #12265a;
@@ -401,6 +446,34 @@ h1 {
   border-bottom-color: #1d1b1b;
 }
 
+.filer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+  height: 40px;
+}
+
+.filer h2 {
+  font-size: 1.6rem;
+}
+
+.filer input {
+  padding: 2px;
+  margin: 4px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-family: monospace;
+  width: 200px;
+  color: #1d1b1b;
+  background-color: #d0d0d0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -573,49 +646,4 @@ body .posts {
   padding: 20px;
   font-size: 1.5rem;
   border-top: 2px solid #325f74;
-}
-
-.post {
-  padding-left: 4vw;
-  padding-right: 4vw;
-  margin: 0;
-  min-height: 20px;
-  margin: 0.2rem;
-  opacity: 0.8;
-  background-color: rgba(94, 165, 184, 0.705);
-  border: 1px solid #12265a;
-  border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-
-.post:hover {
-  opacity: 1;
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-}
-
-@media (min-width: 768px) {
-  .post {
-    padding-left: 2vw;
-  }
-}
-
-@media (min-width: 1024px) {
-  .post {
-    padding-top: 2vw;
-    padding-bottom: 3vw;
-  }
-}
-
-.post h4 {
-  color: #12265a;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-}
-
-.post span {
-  margin-left: 5px;
-  margin-bottom: 5px;
 }

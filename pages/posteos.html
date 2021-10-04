@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/index.css" />
-    <script src="../scripts/index.js" type="module" defer></script>
+    <script src="../scripts/post.js" type="module" defer></script>
 
-    <title>Usuarios</title>
+    <title>Posteos</title>
   </head>
   <body>
     <div class="header">
-      <h1>Usuarios</h1>
+      <h1>Posteos</h1>
       <nav class="nav-bar">
         <a href="/" class="btn-nav">Home</a>
         <a href="/pages/usuarios.html" class="btn-nav">Usuarios</a>
@@ -19,6 +19,18 @@
         <a href="/pages/contacto.html" class="btn-nav">Contacto</a>
       </nav>
     </div>
+    <div class="filer">
+      <h2 class="filtro-tittle">Filtra tus posts ➡️</h2>
+      <label class="label-info"></label>
+      <input
+        type="number"
+        id="input-filter"
+        placeholder="Introduce ID de usuario"
+        autocomplete="off"
+      />
+      <button type="submit" id="btn-filter" class="btn-send">Filtrar</button>
+    </div>
+    <div id="postsPage" class="posts"></div>
     <footer class="footer">
       <div class="footer-links">
         <a

@@ -25,7 +25,12 @@ function setIDFilter() {
 const onInit = () => {
   let localID = localStorage.getItem("idUserFilter", numberID);
 
-  if (localID == undefined || localID.length == 0 || localID <= 0) {
+  if (
+    localID == undefined ||
+    localID.length == 0 ||
+    localID <= 0 ||
+    localID > 10
+  ) {
     try {
       fetch("https://jsonplaceholder.typicode.com/posts")
         .then((response) => response.json())

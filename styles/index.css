@@ -271,7 +271,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 50px;
+  margin: 4rem;
   font-size: 1rem;
 }
 
@@ -553,38 +553,6 @@ h1 {
           box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   -webkit-transform: translateY(4px);
           transform: translateY(4px);
-}
-
-.card footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #12265a;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  height: 30px;
-  padding: 0 25px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.card footer div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.card footer div p {
-  font-size: 0.9rem;
-  margin-right: 10px;
-  padding-right: 10px;
 }
 
 .card .posts-counter {
